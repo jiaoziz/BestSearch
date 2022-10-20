@@ -24,8 +24,6 @@ const Search = () => {
 
     echarts.use([GridComponent, LineChart, CanvasRenderer, UniversalTransition]);
 
-    // console.log('data', data, 'load', isLoading)
-
     useEffect(() => {
         getData(state?.value).then((res) => {
             // console.log(res.data.data)
