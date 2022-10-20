@@ -1,0 +1,49 @@
+.text {
+text-align: center;    font-size: 80px;
+}
+
+.input {
+    width: 60%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.flex .ant-input {
+    border-radius: 4px;
+    background-color: rgb(251,245,223);
+}
+
+.logo {
+    background-color:  rgb(251,245,223);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: #ccc 1px solid;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logoText {
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.logofontWeigth {
+    font-weight: 601;
+}
+
+.flex .ant-btn-icon-only {
+    background-color: rgb(251,245,223);
+
+    width: 50px;
+    border-radius: 4px;
+}

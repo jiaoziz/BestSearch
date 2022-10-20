@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+1. 项目启动: npm run start
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. 使用技术：react(hooks) + react-router + redux
 
-## Available Scripts
+3. 页面使用组件：
+· 首页：使用公共组件Logo、SearchInput
+· 搜索页：使用公共组件Logo，自定义组件EchartsItem，用于数据展示
 
-In the project directory, you can run:
+4. 开发过程：
+· 搭建框架，配置路由
+· 首页通过输入搜索内容，将输入值传入redux（一开始是想通过跳转之后使用useLotion在url中获取输入的值，但是考虑到空格需要使用 + 替换，存在误判即 + 可能是用户输入的而非代码自动转换）
+· 将输入的值使用正则将空格替换为 + 
+· 使用useNavigate实现路由跳转
+· 搜索页面通过redux中存储的value(用户输入的搜索值)回显在顶部的搜索框中
+· 引入axios，配置http请求，使用post方式携带参数,调试接口获取数据
+· 自定义EchartsItem组件，通过调用echartsConfig()方法，使每一个生成的echarts图表绑定到EchartsItem组件上
+· 调用getData()方法获取接口数据，对接口返回数据进行处理，提取出data,sv
+· 在Search组件中通过map方法生成图表，传入index使每一个echarts图标绑定的元素唯一
+· 设置isLoading参数控制页面加载显示组件（在骨架屏组件Skeleton中，接口未完成之前不能获取到product_trends的长度，默认渲染4个）
+· 屏幕自适应，使用媒体查询，控制在不同屏幕宽度下元素的宽高
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. 使用第三方库:antd + echarts + moment + axios 

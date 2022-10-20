@@ -1,0 +1,90 @@
+/* 
+@media screen and (max-width:768px) {
+    .echartsItem {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .echartsItem {
+        width: 380px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .echartsItem {
+        width: 150px;
+    }
+}
+
+@media screen and (min-width:1200px)  {
+    .echartsItem {
+        width: 150px;
+    }
+} */
+
+.echartsBox {
+    width: 80%;
+    margin-top: 50px;
+    margin: 0 auto;
+}
+
+.echartsItems {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.echartsItems .echartsItem {
+    margin-right: 30px;
+    margin-top: 30px;
+    border: 1px #ccc solid;
+    background-color: #fff;
+}
+
+.echartsItem {
+    width: 150px;
+    height: 180px;  
+}
+
+.echartsItem canvas {
+    width: 100%;
+}
+
+.headText {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.itemName, .itemGrowth {
+    margin-left: 15px;
+}
+
+.itemName {
+    font-size: 20px;
+}
+
+.itemGrowth {
+    color: #ccc;
+    font-size: 10px;
+}
+
+.itemDate {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.skeleton {
+    margin: 0 auto;
+    /* margin-top: 50px; */
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
